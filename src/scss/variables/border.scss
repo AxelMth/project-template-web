@@ -1,0 +1,6 @@
+@use "sass:map";
+@import './color.scss';
+
+.is-active {
+  border-color: color(primary);
+}

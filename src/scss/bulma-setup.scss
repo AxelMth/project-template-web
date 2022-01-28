@@ -1,0 +1,10 @@
+@charset "utf-8";
+@import './variables/color';
+
+$primary: color(primary);
+$info: color(info);
+$link: color(link);
+$success: color(success);
+$danger: color(danger);
+
+@import '../../node_modules/bulma/bulma.sass';

@@ -1,26 +1,31 @@
+// eslint-disable-next-line no-use-before-define
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ConfigurationFunnel from './components/funnels/Configuration.funnel';
+import Home from './components/views/home';
+import Landing from './components/views/landing/Landing';
+import AdminLogin from './components/views/login/AdminLogin';
+import UserLogin from './components/views/login/UserLogin';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+const App: React.FC = (): JSX.Element => (
+  <Router>
+    <Switch>
+      <Route path="/configuration">
+        <ConfigurationFunnel />
+      </Route>
+      <Route path="/home">
+        <Home />
+      </Route>
+      <Route path="/login/admin">
+        <AdminLogin />
+      </Route>
+      <Route path="/login/user">
+        <UserLogin />
+      </Route>
+      <Route path="/">
+        <Landing />
+      </Route>
+    </Switch>
+  </Router>
+);
 export default App;

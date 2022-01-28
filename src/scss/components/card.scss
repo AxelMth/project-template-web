@@ -1,0 +1,8 @@
+@import '../variables/color';
+
+.card {
+  @extend .has-background-link-light;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 30px;
+}

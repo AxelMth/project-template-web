@@ -1,0 +1,13 @@
+@import '../variables/color.scss';
+
+@each $color, $hex in $lightColors {
+  .has-background-#{'' + $color} {
+    background-color: $hex !important;
+  }
+}
+
+@each $color, $hex in $colors {
+  .is-#{$color} {
+    color: $hex;
+  }
+}

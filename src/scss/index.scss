@@ -1,0 +1,19 @@
+@import './bulma-setup.scss';
+@import 'variables/border.scss';
+@import 'variables/color.scss';
+@import 'variables/font.scss';
+@import 'font-awesome/scss/fontawesome.scss';
+@import 'font-awesome/scss/solid.scss';
+@import 'font-awesome/scss/brands.scss';
+@import 'font-awesome/scss/regular.scss';
+@import 'components/form.scss';
+@import 'components/card.scss';
+@import 'globals/color.scss';
+@import 'globals/border.scss';
+@import 'globals/size.scss';
+@import 'globals/pointer.scss';
+
+body {
+  font-size: $font-size;
+  font-family: $font-family;
+}

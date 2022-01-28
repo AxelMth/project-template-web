@@ -1,0 +1,40 @@
+@use "sass:map";
+
+$customColors: (
+  primary: #03cea4,
+  info: #406e8e,
+  link: #406e8e,
+  warning: #eac435,
+  success: #03cea4,
+  danger: #c95d63,
+  green: #03cea4,
+  orange: #ff6b6b,
+  yellow: #eac435,
+  red: #c95d63,
+  blue: #406e8e,
+  brown: brown,
+  'light-grey': #ebf1f8,
+  'light-blue': #69ddff,
+);
+
+@function color($color) {
+  @return map-get($customColors, $color);
+}
+
+$lightColors: ();
+@each $color, $hex in $customColors {
+  $lightColors: map.set($lightColors, $color, lighten($hex, 20%));
+}
+
+@function light-color($color) {
+  @return map-get($lightColors, $color);
+}
+
+$darkColors: ();
+@each $color, $hex in $customColors {
+  $darkColors: map.set($darkColors, $color, darken($hex, 20%));
+}
+
+@function dark-color($color) {
+  @return map-get($darkColors, $color);
+}

@@ -1,0 +1,9 @@
+@import '../../scss/variables/color.scss';
+
+.configuration-funnel {
+  &-header {
+    height: 60px;
+    border-bottom: 2px solid;
+    text-align: center;
+  }
+}

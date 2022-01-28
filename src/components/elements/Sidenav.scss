@@ -1,0 +1,44 @@
+@import '../../scss/variables/color.scss';
+
+.sidenav {
+  @media (max-width: 768px) {
+    display: none;
+  }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  border-right: 1px solid color(grey);
+  .is-right {
+    position: absolute;
+    right: 20px;
+  }
+  .is-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 50px;
+    :hover {
+      color: white;
+    }
+  }
+  .is-active {
+    color: white;
+    font-weight: 600;
+    background-color: dark-color(blue);
+    border-right: 5px solid color(yellow);
+    padding-left: 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+
+.sidenav.is-depth-1 {
+  background-color: color(blue);
+  width: 25%;
+  max-width: 250px;
+}
+.sidenav.is-depth-2 {
+  width: 20%;
+  max-width: 200px;
+}

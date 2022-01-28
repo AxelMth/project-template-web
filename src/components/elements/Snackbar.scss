@@ -1,0 +1,60 @@
+@keyframes enter {
+  0% {
+    top: -40px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+@keyframes leave {
+  0% {
+    top: 20px;
+  }
+  100% {
+    top: -40px;
+  }
+}
+
+.snackbar {
+  color: #ffffff;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  border-radius: 20px;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.snackbar .text {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.snackbar.is-primary {
+  background-color: #337ab7;
+}
+
+.snackbar.is-success {
+  background-color: #36d1a2;
+}
+
+.snackbar.is-info {
+  background-color: #5bc0de;
+}
+
+.snackbar.is-warning {
+  background-color: #f0ad4e;
+}
+
+.snackbar.is-danger {
+  background-color: #ff6b6b;
+}
+
+.snackbar.is-link {
+  border-color: transparent;
+  color: #000000;
+}
